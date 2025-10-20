@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yugrow Careers Consulting Website
 
-## Getting Started
+A modern, responsive website for Yugrow Careers Consulting - a career coaching and training brand based in Africa.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Clean, minimalist design with orange and white color scheme
+- **Responsive**: Fully responsive design that works on all devices
+- **SEO Optimized**: Built with Next.js 15 and optimized for search engines
+- **Accessible**: Follows accessibility best practices
+- **Fast Loading**: Optimized for performance with lazy loading and modern web standards
+
+## 📱 Pages
+
+- **Home**: Hero section, program previews, booking integration, testimonials
+- **YuGrow**: 1-on-1 career coaching with process steps and package tiers
+- **WeGrow**: Group training programs with cohort details and learning outcomes
+- **AllGrow**: Social impact programs with mission and donation integration
+- **About Us**: Founder profile, company story, testimonials, speaking engagements
+- **Contact Us**: Contact form, contact information, FAQ, and map
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 (React 19)
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components with Radix UI primitives
+- **Icons**: Lucide React
+- **Animations**: Framer Motion (ready for implementation)
+- **Forms**: React Hook Form (ready for implementation)
+- **CMS**: Sanity.io or Strapi (ready for integration)
+- **Booking**: Cal.com or Calendly (ready for integration)
+- **Hosting**: Vercel (recommended)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd yugrow-website
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # Next.js app router pages
+│   ├── about/             # About Us page
+│   ├── allgrow/           # AllGrow program page
+│   ├── contact/           # Contact Us page
+│   ├── wegrow/            # WeGrow program page
+│   ├── yugrow/            # YuGrow program page
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── ui/               # UI components
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   └── textarea.tsx
+│   ├── footer.tsx        # Footer component
+│   └── navigation.tsx    # Navigation component
+└── lib/                  # Utility functions
+    └── utils.ts          # Utility functions
+```
 
-## Learn More
+## 🎨 Design System
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Primary Orange**: #f97316 (motivation, energy)
+- **White**: #ffffff (clarity & growth)
+- **Black**: #0a0a0a (professionalism & confidence)
+- **Gray**: Various shades for text and backgrounds
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Typography
 
-## Deploy on Vercel
+- **Headings**: Poppins (Google Fonts)
+- **Body**: Inter (Google Fonts)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Custom button variants with orange primary styling
+- Card components for program showcases
+- Form components with consistent styling
+- Responsive navigation with mobile menu
+
+## 🔧 Customization
+
+### Adding New Pages
+
+1. Create a new folder in `src/app/`
+2. Add a `page.tsx` file
+3. Update navigation in `src/components/navigation.tsx`
+
+### Styling
+
+- Modify `src/app/globals.css` for global styles
+- Use Tailwind CSS classes for component styling
+- Custom CSS variables are defined in `:root`
+
+### Content Management
+
+- Replace placeholder content with actual content
+- Add real images to `public/images/`
+- Update contact information and links
+
+## 📈 Performance Optimization
+
+- Images are optimized with Next.js Image component
+- CSS is purged with Tailwind CSS
+- Components are lazy-loaded where appropriate
+- SEO meta tags are included on all pages
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## 📞 Integration Ready
+
+The website is prepared for integration with:
+
+- **Booking Systems**: Cal.com, Calendly
+- **CMS**: Sanity.io, Strapi
+- **Email**: Resend, SendGrid
+- **Analytics**: Google Analytics, Vercel Analytics
+- **Payments**: Flutterwave, Paystack (for donations)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary to Yugrow Careers Consulting.
+
+## 📞 Support
+
+For support or questions, contact:
+
+- Email: hello@yugrowcareers.com
+- Website: [yugrowcareers.com](https://yugrowcareers.com)
+
+---
+
+Built with ❤️ for Yugrow Careers Consulting
