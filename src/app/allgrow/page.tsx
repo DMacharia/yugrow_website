@@ -26,6 +26,8 @@ import {
   Leaf,
   GraduationCap,
   Briefcase,
+  CreditCard,
+  Building2,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -48,12 +50,12 @@ export default function AllGrowPage() {
 
             <p className="text-xl text-gray-700 mb-4 max-w-3xl mx-auto lg:mx-0">
               A safe and empowering space for women navigating their return to
-              work — whether after maternity, caregiving, or a career pause.
+              work - whether after maternity, caregiving, or a career pause.
             </p>
 
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
               We understand that re-entering the workforce is more than updating
-              a CV — it’s about rediscovering confidence, redefining priorities,
+              a CV - it’s about rediscovering confidence, redefining priorities,
               and rebuilding momentum. Through{" "}
               <span className="font-semibold text-orange-600">AllGrow</span>, we
               help you gain clarity on your career direction, identify your
@@ -62,13 +64,6 @@ export default function AllGrowPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild className="w-full">
-                <Link href="/contact">
-                  Join the Community <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
-              </Button>
-
               <Button
                 variant="outline"
                 size="lg"
@@ -102,7 +97,7 @@ export default function AllGrowPage() {
               Moving Forward with Confidence
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              AllGrow is not about going <span className="italic">back</span> —
+              AllGrow is not about going <span className="italic">back</span> -
               it’s about moving forward, stronger and more self-assured. Our
               guided sessions combine reflection, practical tools, and
               supportive peer connections to help women design a return-to-work
@@ -164,148 +159,87 @@ export default function AllGrowPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               AllGrow programs are designed to guide women through every stage
-              of their return-to-work journey — from rebuilding confidence to
+              of their return-to-work journey - from rebuilding confidence to
               rediscovering purpose, upskilling, and thriving in the new world
               of work.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Reignite Program */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Return to Work Pathway */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-2xl">Reignite Program</CardTitle>
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Briefcase className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-2xl">
+                    Return to Work Pathway
+                  </CardTitle>
+                </div>
                 <CardDescription className="text-base">
-                  For women rediscovering their confidence and redefining their
-                  next career chapter.
+                  Rebuild career confidence and redefine your professional
+                  identity
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Guided reflection to rebuild confidence and self-belief
+                <ul className="space-y-3">
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Refresh your CV and LinkedIn through a guided career audit
+                    </span>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Identify transferable skills and new career priorities
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Learn how to position your career break as a strength
+                    </span>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Communicate your career story with confidence
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Learn to use AI tools for career discovery and job search
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Join a supportive peer community
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Explore flexible job options and prepare for interviews
+                    </span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            {/* Reskill Program */}
+            {/* Entrepreneurship Pathway */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-2xl">Reskill Program</CardTitle>
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Sparkles className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <CardTitle className="text-2xl">
+                    Entrepreneurship Pathway
+                  </CardTitle>
+                </div>
                 <CardDescription className="text-base">
-                  Equipping women with digital, leadership, and workplace-ready
-                  skills for a new era of work.
+                  Turn your skills and passions into viable business ideas
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Digital upskilling and remote work readiness
+                <ul className="space-y-3">
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Build clarity around your business goals and structure
+                    </span>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Career coaching and personal branding workshops
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Learn personal branding and marketing fundamentals
+                    </span>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Flexible learning for working mothers
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Hands-on projects and mentorship
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Networking with employers and role models
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Reconnect Program */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl">Reconnect Program</CardTitle>
-                <CardDescription className="text-base">
-                  Helping women rebuild and expand their professional networks
-                  with purpose and confidence.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Guided networking sessions and peer circles
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Personal storytelling and elevator pitch training
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Alumni connections and mentorship opportunities
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Access to inclusive employers
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Community-led learning and collaboration
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Rise Program */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl">Rise Program</CardTitle>
-                <CardDescription className="text-base">
-                  Empowering women to grow into leadership roles or launch
-                  purpose-driven ventures after returning to work.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Leadership and confidence coaching
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Entrepreneurship and innovation labs
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Peer-to-peer mentorship and role model sessions
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Real-world projects for social impact
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Showcase and graduation event
+                  <li className="flex items-start text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Access tools and networks to help your business thrive
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -328,7 +262,7 @@ export default function AllGrowPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Story 1 */}
+            {/* Story 1 - Return to Work */}
             <Card>
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
@@ -340,11 +274,11 @@ export default function AllGrowPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6">
-                  “After a 5-year break to raise my children, I struggled with
-                  self-doubt. AllGrow helped me rebuild my confidence,
-                  rediscover my skills, and tell my story with pride. Today, I’m
-                  back at work in a role I love — and I feel stronger than
-                  ever.”
+                  "After a 6-year break to care for my family, I felt lost about
+                  returning to work. The Return to Work Pathway helped me
+                  rebuild my confidence and refresh my CV. I learned to position
+                  my career break as a strength, and within 3 months, I landed a
+                  flexible role that fits my life perfectly."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
@@ -358,7 +292,7 @@ export default function AllGrowPage() {
               </CardContent>
             </Card>
 
-            {/* Story 2 */}
+            {/* Story 2 - Return to Work */}
             <Card>
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
@@ -370,11 +304,11 @@ export default function AllGrowPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6">
-                  “Transitioning back to work after a long career break felt
-                  overwhelming. Through AllGrow, I found a community that
-                  understood my journey. The mentorship and AI career tools
-                  helped me land a flexible remote role that fits my family life
-                  perfectly.”
+                  "The guided career audit in the Return to Work Pathway was a
+                  game-changer. I updated my LinkedIn profile and learned how to
+                  talk about my career break confidently. The interview
+                  preparation gave me the tools I needed, and I'm now back in
+                  the workforce doing what I love."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
@@ -382,15 +316,13 @@ export default function AllGrowPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Lucy A.</p>
-                    <p className="text-gray-600">
-                      Project Coordinator (Remote)
-                    </p>
+                    <p className="text-gray-600">Project Coordinator</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Story 3 */}
+            {/* Story 3 - Entrepreneurship */}
             <Card>
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
@@ -402,19 +334,19 @@ export default function AllGrowPage() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6">
-                  “AllGrow gave me more than skills — it gave me belief. After
-                  years away from the corporate world, I used the Reignite
-                  Program to refresh my digital skills and connect with
-                  like-minded women. Now, I’m leading a small team and mentoring
-                  others returning to work.”
+                  "The Entrepreneurship Pathway helped me turn my passion for
+                  baking into a real business. I gained clarity on my business
+                  goals, learned marketing fundamentals, and connected with a
+                  network of women entrepreneurs. My home bakery is now
+                  thriving, and I have the confidence to scale it further."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
                     <span className="text-orange-500 font-semibold">S</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Susan K.</p>
-                    <p className="text-gray-600">Operations Lead</p>
+                    <p className="font-semibold text-gray-900">Sarah K.</p>
+                    <p className="text-gray-600">Business Owner</p>
                   </div>
                 </div>
               </CardContent>
@@ -426,62 +358,76 @@ export default function AllGrowPage() {
       {/* Donation Section */}
       <section
         id="support-mission"
-        className="py-16 bg-orange-500 scroll-mt-20"
+        className="py-16 bg-gradient-to-br from-orange-50 to-white scroll-mt-20"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Support Our Mission
           </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Your donation helps us provide free career development programs to
-            vulnerable groups across Africa.
+          <p className="text-xl text-gray-700 mb-12">
+            Many women returning to work face confidence loss, skill gaps, and
+            hiring bias after career breaks. Your donation helps them rebuild
+            their confidence, update their skills, and re-enter the workforce
+            stronger than before.
           </p>
 
-          <Card className="max-w-md mx-auto">
-            <CardContent className="p-8">
-              <div className="flex items-center justify-center mb-4">
-                <DollarSign className="h-8 w-8 text-orange-500" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Make a Donation
-              </h3>
-              <div className="space-y-4">
-                <div className="grid grid-cols-3 gap-2">
-                  {[`1,000`, `5,000`, `10,000`].map((amount) => (
-                    <Button
-                      key={amount}
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setDonationAmount(amount.toString())}
-                      className={
-                        donationAmount === amount.toString()
-                          ? "bg-orange-500 text-white"
-                          : ""
-                      }
-                    >
-                      Ksh {amount}
-                    </Button>
-                  ))}
+          {/* Payment Details - Prominent Display */}
+          <div className="mb-8">
+            <Card className="max-w-2xl mx-auto border-2 border-gray-200 shadow-xl">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <CreditCard className="h-8 w-8 text-blue-600" />
+                  </div>
                 </div>
-                <Input
-                  type="number"
-                  placeholder="Custom amount"
-                  value={donationAmount}
-                  onChange={(e) => setDonationAmount(e.target.value)}
-                  className="w-full"
-                />
-                <Button className="w-full" asChild>
-                  <Link href="#" onClick={(e) => e.preventDefault()}>
-                    Donate Now
-                  </Link>
-                </Button>
-              </div>
-              <p className="text-sm text-gray-600 mt-4">
-                All donations are used directly for program delivery and
-                participant support.
-              </p>
-            </CardContent>
-          </Card>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  M-Pesa Paybill Details
+                </h3>
+
+                <div className="bg-gray-50 rounded-lg p-6 mb-6 space-y-4">
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <div className="flex items-center space-x-3">
+                      <Building2 className="h-5 w-5 text-gray-600" />
+                      <span className="text-lg font-medium text-gray-700">
+                        Business Name:
+                      </span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">
+                      Yugrow Consultancy
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-lg font-medium text-gray-700">
+                      Business Number:
+                    </span>
+                    <span className="text-2xl font-bold text-blue-600">
+                      400200
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between py-3">
+                    <span className="text-lg font-medium text-gray-700">
+                      Account Number:
+                    </span>
+                    <span className="text-2xl font-bold text-blue-600">
+                      150559
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                  <p className="text-sm text-gray-700 text-left">
+                    <strong>How to donate:</strong> Go to M-Pesa, select "Pay
+                    Bill", enter Business Number{" "}
+                    <strong className="text-blue-600">400200</strong>, Account
+                    Number <strong className="text-blue-600">150559</strong>,
+                    enter your donation amount, and complete the transaction.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </div>

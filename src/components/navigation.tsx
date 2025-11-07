@@ -43,18 +43,25 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors font-medium ${
+                  className={`transition-all font-medium relative pb-1 ${
                     isActive
-                      ? "text-orange-500 border-b-2 border-orange-500 pb-1"
+                      ? "text-orange-600 font-semibold"
                       : "text-gray-700 hover:text-orange-500"
                   }`}
                 >
                   {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500"></span>
+                  )}
                 </Link>
               );
             })}
@@ -91,9 +98,9 @@ export function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                    className={`block px-3 py-2 rounded-md font-medium transition-all ${
                       isActive
-                        ? "text-orange-500 bg-orange-50"
+                        ? "text-orange-600 bg-orange-100 font-semibold border-l-4 border-orange-500"
                         : "text-gray-700 hover:text-orange-500 hover:bg-orange-50"
                     }`}
                   >

@@ -16,6 +16,13 @@ import { User, Mail, Phone, Send, X } from "lucide-react";
 import { sendEmail, getEmailSourceFromPath } from "@/lib/email";
 import { usePathname } from "next/navigation";
 
+// Google Form URL for consultation bookings with payment details
+// Payment: Paybill 400200, Till 150559
+// See CONSULTATION_FORM_SETUP.md for form setup instructions
+// TODO: Replace with your actual Google Form URL after creating the form
+const CONSULTATION_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeJIO-GRHhF-iAOucajh1vyF339imilul9i4b-d1PLjOZPpXA/viewform?usp=dialog";
+
 interface CTAButtonProps {
   children: React.ReactNode;
   variant?:
@@ -121,6 +128,21 @@ export function CTAButton({
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  // For consultation type, link directly to Google Form
+  if (ctaType === "consultation") {
+    return (
+      <Button variant={variant} size={size} className={className} asChild>
+        <a
+          href={CONSULTATION_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      </Button>
+    );
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
@@ -131,7 +153,6 @@ export function CTAButton({
       <DialogContent className="max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-gray-900">
-            {ctaType === "consultation" && "Book Your Free Consultation"}
             {ctaType === "program" && `Learn More About ${programName}`}
             {ctaType === "contact" && "Get in Touch"}
             {ctaType === "general" && "Get Started"}

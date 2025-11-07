@@ -255,13 +255,13 @@ export default function ContactPage() {
                           Email Us
                         </h3>
                         <p className="text-gray-600 mb-2">
-                          Send us an email and we'll respond within 24 hours.
+                          Send us an email and we'll respond within 24-48 hours.
                         </p>
                         <a
-                          href="mailto:hello@yugrowcareers.com"
+                          href="mailto:info@yugrowcareers.co.ke"
                           className="text-orange-500 hover:text-orange-600 font-medium"
                         >
-                          hello@yugrowcareers.com
+                          info@yugrowcareers.co.ke
                         </a>
                       </div>
                     </div>
@@ -302,17 +302,12 @@ export default function ContactPage() {
                           Book a Consultation
                         </h3>
                         <p className="text-gray-600 mb-4">
-                          Schedule a free 30-minute consultation to discuss your
-                          career goals.
+                          Fill out our Google Form to book a free 30-minute
+                          consultation. Complete payment via M-Pesa and we'll
+                          confirm your booking within 24-48 hours.
                         </p>
                         <Button asChild>
-                          <a
-                            href="https://calendly.com/yugrowcareers"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Schedule Now
-                          </a>
+                          <a href="/#book-consultation">Book Consultation</a>
                         </Button>
                       </div>
                     </div>
@@ -341,16 +336,17 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  What is the difference between the 5-week and 8-week programs?
+                  What programs does Yugrow offer?
                 </h3>
                 <p className="text-gray-600">
-                  The <span className="font-medium">5-week program</span> is
-                  designed for professionals seeking to regain clarity and
-                  confidence as they re-enter the workforce, while the{" "}
-                  <span className="font-medium">8-week WeGrow Masterclass</span>{" "}
-                  offers a deeper, more immersive experience focusing on
-                  leadership growth, personal development, and networking
-                  through real-world case studies and group learning.
+                  We offer three main programs:{" "}
+                  <span className="font-medium">YuGrow</span> (1-on-1 career
+                  coaching), <span className="font-medium">WeGrow</span> (group
+                  training programs including WeGrow Pamoja, WeGrow Masterclass,
+                  and Bespoke Learning Packages), and{" "}
+                  <span className="font-medium">AllGrow</span> (supporting women
+                  returning to work through Return to Work Pathway and
+                  Entrepreneurship Pathway).
                 </p>
               </CardContent>
             </Card>
@@ -358,13 +354,17 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Who can join the AllGrow program?
+                  Who can benefit from AllGrow programs?
                 </h3>
                 <p className="text-gray-600">
-                  AllGrow is open to women returning to work after maternity,
-                  caregiving, or a career break. It’s also ideal for anyone
-                  seeking structured guidance, renewed confidence, and practical
-                  strategies to re-establish themselves professionally.
+                  AllGrow is designed for women returning to work after
+                  maternity, caregiving, or a career break. The{" "}
+                  <span className="font-medium">Return to Work Pathway</span>{" "}
+                  helps rebuild confidence and refresh professional profiles,
+                  while the{" "}
+                  <span className="font-medium">Entrepreneurship Pathway</span>{" "}
+                  supports those looking to turn their skills into viable
+                  business ideas.
                 </p>
               </CardContent>
             </Card>
@@ -372,15 +372,14 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Are the sessions conducted online or in person?
+                  How do I book a consultation?
                 </h3>
                 <p className="text-gray-600">
-                  Our programs are offered in both{" "}
-                  <span className="font-medium">virtual</span>
-                  and <span className="font-medium">in-person</span> formats to
-                  suit your schedule. Virtual sessions are interactive and
-                  personalized, ensuring you get the same impact and support as
-                  in-person coaching.
+                  To book a consultation, click on any "Speak with a coach" or
+                  "Book consultation" button on our website. This will take you
+                  to our Google Form where you can provide your details and
+                  complete payment via M-Pesa (Paybill: 400200, Account:
+                  150559). We'll confirm your booking within 24-48 hours.
                 </p>
               </CardContent>
             </Card>
@@ -388,15 +387,30 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  What kind of support will I receive during the program?
+                  Are the WeGrow programs conducted online or in person?
                 </h3>
                 <p className="text-gray-600">
-                  You’ll receive personalized coaching, guided reflection
-                  exercises, peer discussions, and practical career tools. Our
-                  team, led by
-                  <span className="font-medium"> Virginiah Gitome</span>,
-                  ensures that each participant leaves with a clear, confident
-                  plan for their next career step.
+                  Our WeGrow programs are conducted{" "}
+                  <span className="font-medium">virtually via Google Meet</span>{" "}
+                  to ensure accessibility and flexibility. WeGrow Pamoja
+                  sessions run on alternating Tuesdays and Thursdays (7-8:30
+                  PM), while Masterclass sessions are scheduled based on demand.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  What kind of support will I receive during the programs?
+                </h3>
+                <p className="text-gray-600">
+                  You'll receive personalised guidance, group learning
+                  opportunities, practical tools, and ongoing support. Our
+                  programs blend career assessment, strategy development,
+                  professional networking, mental health & boundaries, workplace
+                  mindset, and virtual career branding to help you gain clarity
+                  and confidence to thrive in the workplace.
                 </p>
               </CardContent>
             </Card>
@@ -407,9 +421,10 @@ export default function ContactPage() {
                   Do you work with clients outside Kenya?
                 </h3>
                 <p className="text-gray-600">
-                  Yes. Yugrow supports women and professionals across Africa and
-                  beyond. Our online sessions are accessible globally, allowing
-                  you to participate from anywhere in the world.
+                  Yes. Yugrow supports early and mid-level professionals across
+                  Africa and beyond. Our virtual programs are accessible
+                  globally, allowing you to participate from anywhere in the
+                  world.
                 </p>
               </CardContent>
             </Card>
@@ -417,13 +432,33 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  What if I’m unsure which program fits me best?
+                  What if I'm unsure which program fits me best?
                 </h3>
                 <p className="text-gray-600">
-                  No worries! You can schedule a{" "}
-                  <span className="font-medium">free discovery call</span> to
-                  discuss your goals. We’ll help you choose the program that
-                  best matches your current stage and aspirations.
+                  No worries! You can{" "}
+                  <span className="font-medium">
+                    book a free 30-minute consultation
+                  </span>{" "}
+                  through our Google Form to discuss your goals. We'll help you
+                  choose the program that best matches your current stage,
+                  whether you're returning to work, looking to grow in your
+                  current role, or exploring entrepreneurship.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  How can I support the AllGrow mission?
+                </h3>
+                <p className="text-gray-600">
+                  You can support our mission by making a donation via M-Pesa.
+                  Use Paybill Number <span className="font-medium">400200</span>{" "}
+                  and Account Number <span className="font-medium">150559</span>{" "}
+                  (Business Name: Yugrow Consultancy). Your donation helps us
+                  provide free career development programs to women returning to
+                  work across Africa.
                 </p>
               </CardContent>
             </Card>

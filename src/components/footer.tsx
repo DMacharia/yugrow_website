@@ -10,7 +10,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-4">
               <img
-                src="/images/yugrow.jpg"
+                src="/images/yugrow.png"
                 alt="YUGROW Logo"
                 className="h-16 w-auto"
               />
@@ -21,14 +21,14 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
-              Empowering professionals across Africa with personalized career
+              Empowering professionals across Africa with personalised career
               coaching, group training, and social impact programs. Grow with
               confidence and clarity.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail className="h-4 w-4" />
-                <span>hello@yugrowcareers.com</span>
+                <span>info@yugrowcareers.co.ke</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <MapPin className="h-4 w-4" />
@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Yugrow Careers Consulting. All rights reserved.</p>
+          <p>&copy; 2025 Yugrow Careers Consulting. All rights reserved.</p>
         </div>
       </div>
     </footer>

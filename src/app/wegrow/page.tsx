@@ -17,9 +17,16 @@ import {
   Star,
   Target,
   BookOpen,
+  Mail,
+  Sparkles,
+  FileText,
+  Heart,
+  Brain,
+  Globe,
 } from "lucide-react";
 import { useState } from "react";
-import { BookingCalendar } from "@/components/booking-calendar";
+import Link from "next/link";
+import { BookingDialog } from "@/components/booking-dialog";
 
 export default function WeGrowPage() {
   interface SelectedPackage {
@@ -95,31 +102,27 @@ export default function WeGrowPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Program Structure
+              Our Programs
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join us for an interactive learning journey featuring expert-led
-              workshops, real-world case studies, peer discussions, and
-              role-plays — designed to help you gain practical skills, share
-              insights, and grow your professional network while learning.
+              Choose the program that best fits your career development needs.
+              Each program is designed to support your growth journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* 5-Week Program */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* WeGrow Pamoja */}
             <Card className="hover:shadow-lg transition-shadow flex flex-col h-full">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Calendar className="h-6 w-6 text-orange-500" />
+                    <Users className="h-6 w-6 text-orange-500" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">
-                      WeGrow Core Program
-                    </CardTitle>
+                    <CardTitle className="text-2xl">WeGrow Pamoja</CardTitle>
                     <CardDescription className="text-base">
-                      5-Week Group interactive and flexible career growth
-                      journey
+                      5-week interactive group program for career and leadership
+                      growth
                     </CardDescription>
                   </div>
                 </div>
@@ -127,74 +130,66 @@ export default function WeGrowPage() {
 
               <CardContent className="flex flex-col justify-between flex-grow">
                 <div className="space-y-4 mb-6">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    5-week program with live weekly sessions
-                  </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                     Expert-led workshops, discussions & open Q&A
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Small cohorts (3–10 participants) for personalized attention
+                    Small cohorts (3-10 participants) for personalised attention
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Virtual via Google Meet — Mondays and/or Thursdays, 7–8:30
-                    PM
+                    1.5-hour session per week via Google Meet
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Pre-assessment before kickoff & feedback within 24 hours
+                    Pre-assessment before kickoff & feedback within 48 hours
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    New cohorts start every month
+                    New cohorts start every month - Alternating between Tuesday
+                    and Thursday 7-8:30 PM
                   </div>
                 </div>
 
                 <div className="mt-auto">
                   <div className="text-2xl font-bold text-orange-500 mb-4">
-                    KES 18,500
+                    Ksh 10,000
                   </div>
                   <Button
-                    onClick={() => {
-                      setSelectedPackage({
-                        name: "WeGrow 5-week Program",
-                        price: "Ksh 18,500",
-                      });
-                      document
-                        .getElementById("book-slot")
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }}
+                    asChild
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
                   >
-                    <a href="#book-class">Join 5-Week WeGrow Core</a>
+                    <Link href="/contact">
+                      Reach Out
+                      <Mail className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* 8-Week Program */}
+            {/* WeGrow Masterclass */}
             <Card className="hover:shadow-lg transition-shadow border-orange-200 relative flex flex-col h-full">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              {/* <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Most Popular
+                  On-Demand
                 </span>
-              </div>
+              </div> */}
 
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <BookOpen className="h-6 w-6 text-orange-500" />
+                    <Sparkles className="h-6 w-6 text-orange-500" />
                   </div>
                   <div>
                     <CardTitle className="text-2xl">
-                      WeGrow MasterClass Program
+                      WeGrow Masterclass
                     </CardTitle>
                     <CardDescription className="text-base">
-                      8-week immersive journey for career and leadership growth
+                      Focused, high-impact sessions for real workplace
+                      challenges and career transitions
                     </CardDescription>
                   </div>
                 </div>
@@ -204,57 +199,83 @@ export default function WeGrowPage() {
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Learn through real-world case studies, peer discussions, and
-                    role-plays
+                    1.5 hrs session conducted via Google Meet
                   </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Build your professional network and gain practical
-                    experience
+                  <div className="text-sm font-semibold text-gray-900 mb-2">
+                    On-demand topics include:
                   </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />1
-                    session per week (3 hours each) — live, interactive, and
-                    virtual (G-Meet)
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Cohorts of 3–10 participants for personalized guidance and
-                    feedback
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Masterclass option available for focused, one-time deep
-                    dives
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Bespoke learning packages tailored to your goals and
-                    organization
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    All assignments returned with feedback within 24 hours
+                  <div className="pl-6 space-y-2 text-sm text-gray-600">
+                    <div>• Mastering the Art of Self-Advocacy</div>
+                    <div>• Leadership Presence for Emerging Leaders</div>
+                    <div>• The Confident Communicator</div>
+                    <div>• Building a Personal Brand that Opens Doors</div>
+                    <div>• Handling Career Transitions with Clarity</div>
+                    <div>• Women & Leadership Masterclass</div>
                   </div>
                 </div>
 
                 <div className="mt-auto">
-                  <div className="text-2xl font-bold text-orange-500 mb-4">
-                    KES 28,500
-                  </div>
                   <Button
-                    onClick={() => {
-                      setSelectedPackage({
-                        name: "WeGrow 8-week Program",
-                        price: "Ksh 28,500",
-                      });
-                      document
-                        .getElementById("book-slot")
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }}
+                    asChild
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
                   >
-                    <a href="#book-class">Join 8-Week WeGrow MasterClass</a>
+                    <Link href="/contact">
+                      Reach Out
+                      <Mail className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Bespoke Learning Package */}
+            <Card className="hover:shadow-lg transition-shadow flex flex-col h-full">
+              <CardHeader>
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Target className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-2xl">
+                      Bespoke Learning Package
+                    </CardTitle>
+                    <CardDescription className="text-base">
+                      Tailored program designed around your chosen topic,
+                      duration, and structure
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+
+              <CardContent className="flex flex-col justify-between flex-grow">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Custom program aligned with your goals and objectives
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Choose your topic, duration, and structure
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Designed to deliver maximum impact
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                    Flexible learning format to suit your needs
+                  </div>
+                </div>
+
+                <div className="mt-auto">
+                  <Button
+                    asChild
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
+                  >
+                    <Link href="/contact">
+                      Reach Out
+                      <Mail className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -279,14 +300,27 @@ export default function WeGrowPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="h-8 w-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Career Assessment
+              </h3>
+              <p className="text-gray-600">
+                Personality assessment, strength assessment, skill inventory and
+                value clarification.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-orange-500" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Career Strategy
               </h3>
               <p className="text-gray-600">
-                Develop a clear career roadmap and learn how to navigate career
-                transitions effectively.
+                Develop a personal Career Development Plan that aligns with your
+                goals, strengths, and growth aspirations.
               </p>
             </div>
 
@@ -298,21 +332,79 @@ export default function WeGrowPage() {
                 Professional Networking
               </h3>
               <p className="text-gray-600">
-                Build meaningful professional relationships and expand your
-                network strategically.
+                Grow your professional community through intentional
+                relationship-building.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-8 w-8 text-orange-500" />
+                <Heart className="h-8 w-8 text-orange-500" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Personal Branding
+                Mental Health & Boundaries
               </h3>
               <p className="text-gray-600">
-                Create a compelling personal brand that sets you apart in the
-                job market.
+                Learn strategies to protect your well-being, manage stress, and
+                set healthy boundaries at work.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="h-8 w-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Workplace Mindset
+              </h3>
+              <p className="text-gray-600">
+                Build confidence, emotional intelligence, and adaptability to
+                navigate challenges and lead effectively in dynamic
+                environments.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="h-8 w-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Virtual Career Brand
+              </h3>
+              <p className="text-gray-600">
+                Polish your professional presence across CV, LinkedIn, and other
+                digital platforms to showcase your unique value and attract
+                opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose WeGrow?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join a diverse group of professionals who are committed to growing
+              their careers together.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Diverse Professional Backgrounds
+              </h3>
+              <p className="text-gray-600">
+                Learn from peers across different industries and experience
+                levels.
               </p>
             </div>
 
@@ -321,24 +413,11 @@ export default function WeGrowPage() {
                 <Star className="h-8 w-8 text-orange-500" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Interview Skills
+                Collaborative Learning
               </h3>
               <p className="text-gray-600">
-                Master the art of interviewing and learn how to present yourself
-                confidently.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="h-8 w-8 text-orange-500" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Leadership Development
-              </h3>
-              <p className="text-gray-600">
-                Develop leadership skills and learn how to influence and inspire
-                others.
+                Work together on projects and learn from each other's
+                experiences.
               </p>
             </div>
 
@@ -347,109 +426,24 @@ export default function WeGrowPage() {
                 <CheckCircle className="h-8 w-8 text-orange-500" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Goal Achievement
+                Ongoing Support
               </h3>
               <p className="text-gray-600">
-                Learn proven strategies for setting and achieving your career
-                goals.
+                Access to alumni network and continued learning opportunities.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Cohort Details Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Cohort Experience
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join a diverse group of professionals who are committed to growing
-              their careers together.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                What Makes Our Cohorts Special
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Diverse Professional Backgrounds
-                    </h4>
-                    <p className="text-gray-600">
-                      Learn from peers across different industries and
-                      experience levels.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Collaborative Learning
-                    </h4>
-                    <p className="text-gray-600">
-                      Work together on projects and learn from each other's
-                      experiences.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Ongoing Support
-                    </h4>
-                    <p className="text-gray-600">
-                      Access to alumni network and continued learning
-                      opportunities.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Real-world Application
-                    </h4>
-                    <p className="text-gray-600">
-                      Apply what you learn immediately in your current role or
-                      job search.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                Upcoming Cohorts
-              </h4>
-              <div className="space-y-4">
-                <div className="border-l-4 border-orange-500 pl-4">
-                  <h5 className="font-semibold text-gray-900">WeGrow Core</h5>
-                  <p className="text-gray-600">Starting Jan, 2026</p>
-                  <p className="text-sm text-gray-500">
-                    Mondays & Wednesdays, 6:00 PM - 8:00 PM
-                  </p>
-                </div>
-                <div className="border-l-4 border-orange-500 pl-4">
-                  <h5 className="font-semibold text-gray-900">
-                    WeGrow MasterClass
-                  </h5>
-                  <p className="text-gray-600">Starting March, 2026</p>
-                  <p className="text-sm text-gray-500">
-                    Saturdays, 10:00 AM - 1:00 PM
-                  </p>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-orange-500" />
               </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Real-world Application
+              </h3>
+              <p className="text-gray-600">
+                Apply what you learn immediately in your current role or job
+                search.
+              </p>
             </div>
           </div>
         </div>
@@ -457,93 +451,103 @@ export default function WeGrowPage() {
 
       {/* Testimonial Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               What Our Alumni Say
             </h2>
           </div>
 
-          <Card className="max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 text-yellow-400 fill-current"
-                  />
-                ))}
-              </div>
-              <blockquote className="text-lg text-gray-700 mb-6">
-                "The WeGrow program was a game-changer for my career. The
-                collaborative environment and diverse perspectives helped me see
-                my career from new angles. I landed a promotion within 3 months
-                of completing the program."
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-orange-500 font-semibold">F</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Fatima K.</p>
-                  <p className="text-gray-600">Project Manager</p>
+                <blockquote className="text-lg text-gray-700 mb-6">
+                  "WeGrow Pamoja helped me rediscover my strengths through the
+                  career assessment. The 5-week program gave me clarity on my
+                  career direction and the confidence to set healthy boundaries
+                  at work. The small cohort made it feel like a supportive
+                  community."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-orange-500 font-semibold">F</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Fatima K.</p>
+                    <p className="text-gray-600">Project Manager</p>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+              </CardContent>
+            </Card>
 
-      {/* CTA Section */}
-      <section
-        id="join-cohort"
-        className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 text-center relative overflow-hidden"
-      >
-        {/* Decorative Background Pattern */}
-        <div className="absolute inset-0 bg-[url('/patterns/circles.svg')] opacity-10"></div>
+            {/* Testimonial 2 */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <blockquote className="text-lg text-gray-700 mb-6">
+                  "The WeGrow Masterclass on 'Building a Personal Brand that
+                  Opens Doors' transformed my LinkedIn profile. I learned to
+                  showcase my unique value and within weeks, I started receiving
+                  opportunities I never thought possible. The focused session
+                  was exactly what I needed."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-orange-500 font-semibold">D</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">David M.</p>
+                    <p className="text-gray-600">Marketing Specialist</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-extrabold text-white mb-6">
-            Ready to Grow Together?
-          </h2>
-          <p className="text-lg sm:text-xl text-orange-50 mb-10 leading-relaxed">
-            Join our next cohort and start your journey toward career success —
-            learning, growing, and thriving alongside a supportive community of
-            professionals.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              onClick={() => {
-                setSelectedPackage({
-                  name: "WeGrow 5-week Program",
-                  price: "Ksh 18,500",
-                });
-                document
-                  .getElementById("book-slot")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="text-lg px-10 py-5 bg-white text-orange-600 font-semibold rounded-full shadow-lg hover:scale-105 hover:shadow-xl hover:text-black transition-all duration-300"
-            >
-              <a href="#book-class">Join 5-Week WeGrow Core</a>
-              <Calendar className="ml-2 h-5 w-5" />
-            </Button>
-
-            <Button
-              onClick={() => {
-                setSelectedPackage({
-                  name: "WeGrow 8-week Program",
-                  price: "Ksh 28,500",
-                });
-                document
-                  .getElementById("book-slot")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="text-lg px-10 py-5 bg-white text-orange-600 font-semibold rounded-full shadow-lg hover:scale-105 hover:shadow-xl hover:text-black transition-all duration-300"
-            >
-              <a href="#book-class"> Join 8-Week WeGrow MasterClass</a>
-              <Calendar className="ml-2 h-5 w-5" />
-            </Button>
+            {/* Testimonial 3 */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <blockquote className="text-lg text-gray-700 mb-6">
+                  "Our organisation worked with WeGrow on a Bespoke Learning
+                  Package focused on workplace mindset and mental health. The
+                  tailored program helped our team build emotional intelligence
+                  and set healthy boundaries. The impact on our workplace
+                  culture has been remarkable."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-orange-500 font-semibold">S</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Sarah A.</p>
+                    <p className="text-gray-600">HR Director</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -554,13 +558,23 @@ export default function WeGrowPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Career?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               Book your free introductory meeting today and take the first step
               towards career success.
             </p>
+            <Button
+              asChild
+              size="lg"
+              className="text-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              <a href="#book-class">
+                Open Booking Calendar
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
           </div>
-          <BookingCalendar selectedPackage={selectedPackage} />
         </div>
+        <BookingDialog selectedPackage={selectedPackage} />
       </section>
     </div>
   );

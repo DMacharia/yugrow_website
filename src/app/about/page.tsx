@@ -18,6 +18,9 @@ import {
   Award,
   MessageCircle,
   CheckCircle,
+  GraduationCap,
+  Briefcase,
+  BadgeCheck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -40,10 +43,9 @@ export default function AboutPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto lg:mx-0">
               Founded with a vision to bridge the gap between career aspirations
               and professional success, Yugrow Careers Consulting has been at
-              the forefront of career development in Africa. Our mission is to
-              provide accessible, high-quality career coaching and training
-              programs that help individuals unlock their potential and achieve
-              their professional goals.
+              the forefront of career development in Africa. We aim to provide
+              holistic career development services that help professionals find
+              clarity, confidence, and direction and succeed in the workplace
             </p>
           </div>
           {/* Right: Text */}
@@ -98,32 +100,31 @@ export default function AboutPage() {
 
               <div className="space-y-6 mb-8 text-lg text-gray-700">
                 <p>
-                  Hello, I’m{" "}
                   <span className="font-semibold text-gray-900">
                     Virginiah Gitome
-                  </span>
-                  , a Certified Career Professional and Founder of{" "}
+                  </span>{" "}
+                  is a Certified Career Professional and the Founder of{" "}
                   <span className="font-semibold text-gray-900">
                     Yugrow Consulting
                   </span>
-                  , where we specialize in workplace growth and meaningful
+                  , where she specialises in workplace growth and meaningful
                   career development.
                 </p>
 
                 <p>
                   With over{" "}
                   <span className="font-semibold">10 years of experience</span>{" "}
-                  supporting early and mid-career professionals, I help
+                  supporting early and mid-career professionals, Virginiah helps
                   individuals clarify their goals, build confidence, and develop
-                  the skills needed to thrive at work.
+                  the skills needed to thrive in their careers.
                 </p>
 
                 <p>
-                  My approach goes beyond helping professionals find the right
+                  Her approach goes beyond helping professionals find the right
                   opportunities — it’s about positioning them to grow{" "}
                   <span className="italic">within</span> those opportunities,
                   fostering sustainable success and long-term impact in their
-                  careers.
+                  professional journeys.
                 </p>
 
                 <p>
@@ -131,22 +132,42 @@ export default function AboutPage() {
                   <span className="font-semibold">
                     career development programs, workplace training,
                   </span>{" "}
-                  and practical tools, I equip individuals to excel in their
+                  and practical tools, she equips individuals to excel in their
                   roles, rediscover purpose, and achieve balance between
                   ambition and well-being.
                 </p>
               </div>
 
+              {/* Credentials & Expertise */}
+              <div className="mb-8 p-6 bg-gradient-to-br from-orange-50 to-white rounded-xl border border-orange-100">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Award className="h-5 w-5 text-orange-500 mr-2" />
+                  Credentials & Expertise
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <BadgeCheck className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Certified career development professional
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <GraduationCap className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      MSc. Business Psychology
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Briefcase className="h-5 w-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Actual work experience
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton
-                  size="lg"
-                  className="text-lg px-8 py-4"
-                  ctaType="consultation"
-                >
-                  Book a Session
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </CTAButton>
                 <CTAButton
                   variant="outline"
                   size="lg"
@@ -168,8 +189,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Yugrow Careers Consulting was born from a simple belief: every
-              professional deserves the opportunity to grow and succeed in their
-              career.
+              professional deserves the opportunity to thrive in the workplace.
             </p>
           </div>
 
@@ -182,9 +202,9 @@ export default function AboutPage() {
                 The Problem
               </h3>
               <p className="text-gray-600">
-                We noticed that many talented professionals were struggling to
-                advance their careers due to lack of guidance, confidence, and
-                clear direction.
+                We noticed that early and mid-level professionals were
+                struggling to succeed in the workplace because of a lack of
+                clarity and confidence.
               </p>
             </div>
 
@@ -196,8 +216,9 @@ export default function AboutPage() {
                 The Solution
               </h3>
               <p className="text-gray-600">
-                We created comprehensive coaching programs that combine
-                personalized guidance with practical tools and ongoing support.
+                We created comprehensive and holistic programs that blend
+                personalised guidance, group learning, practical tools, and
+                ongoing support.
               </p>
             </div>
 
@@ -209,9 +230,10 @@ export default function AboutPage() {
                 The Impact
               </h3>
               <p className="text-gray-600">
-                Today, we've helped hundreds of professionals across Africa
-                achieve their career goals and build fulfilling professional
-                lives.
+                Today, we've supported hundreds of professionals across Africa
+                to gain the clarity and confidence they need to thrive in the
+                workplace, unlock new opportunities, and build meaningful,
+                fulfilling careers.
               </p>
             </div>
           </div>
@@ -253,8 +275,8 @@ export default function AboutPage() {
                 Excellence
               </h3>
               <p className="text-gray-600">
-                We maintain the highest standards in our coaching and
-                continuously improve our programs based on client feedback.
+                We maintain the highest standards in our work and continuously
+                refine our programs based on client feedback.
               </p>
             </div>
 
@@ -408,7 +430,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Virginiah is available for speaking engagements on career
-              development, leadership, and professional growth topics.
+              development and professional growth topics.
             </p>
           </div>
 
@@ -446,11 +468,11 @@ export default function AboutPage() {
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      Personal Branding for Professionals
+                      From Vision to Results
                     </h4>
                     <p className="text-gray-600">
-                      How to build and maintain a strong personal brand that
-                      opens doors to opportunities.
+                      Turning career dreams into achievable goals with clear
+                      direction and measurable action.
                     </p>
                   </div>
                 </li>
@@ -458,11 +480,10 @@ export default function AboutPage() {
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      Diversity and Inclusion in the Workplace
+                      From Classroom to Workplace
                     </h4>
                     <p className="text-gray-600">
-                      Creating inclusive environments where everyone can thrive
-                      and grow.
+                      What school didn't teach but work will demand.
                     </p>
                   </div>
                 </li>
@@ -479,7 +500,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-gray-600 mb-6 text-center">
                   Interested in having Virginiah speak at your event or
-                  organization? We'd love to hear from you.
+                  organisation? We'd love to hear from you.
                 </p>
                 <CTAButton className="w-full" ctaType="contact">
                   Get in Touch

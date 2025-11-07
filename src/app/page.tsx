@@ -15,7 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Star, CheckCircle } from "lucide-react";
-import { BookingCalendar } from "@/components/booking-calendar";
+import { BookingDialog } from "@/components/booking-dialog";
 
 export default function Home() {
   const [selectedPackage, setSelectedPackage] = useState<SelectedPackage>({
@@ -42,15 +42,15 @@ export default function Home() {
           {/* Text Section */}
           <div className="text-center lg:text-left z-10">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Grow Clarity, Build Confidence— <br />
-              <span className="text-orange-500">Succeed in the Workplace</span>
+              Grow Clarity, Build Confidence <br />
+              <span className="text-orange-500">Thrive in the Workplace</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto lg:mx-0">
               Whether you're launching your career, growing in a current role,
-              or navigating a transition to the next level — do it more
-              effectively with a coach who helps you thrive with purpose and
-              clarity.
+              or navigating a transition to the next level - do it more
+              effectively with a coach who helps you gain the clarity and
+              confidence you need to thrive in the workplace.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="relative flex justify-center lg:justify-end z-10">
             <div className="relative w-full max-w-md lg:max-w-xl">
               <img
-                src="/images/hero-bg.jpg"
+                src="/images/homepage.jpg"
                 alt="Abstract representation of growth and clarity"
                 className="w-full h-auto rounded-3xl shadow-2xl object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -95,19 +95,24 @@ export default function Home() {
       </section>
 
       {/* -------------------- BOOKING SECTION -------------------- */}
-      <section id="book-consultation" className="py-16 bg-white scroll-mt-20">
+      {/* <section id="book-consultation" className="py-16 bg-white scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Book your free 30-minute consultation
           </h2>
-          <p className="text-lg text-gray-600 mb-12">
-            Please select a convenient time using the calendar below. Our team
-            will confirm your booking, typically within 24 hours.
+          <p className="text-lg text-gray-600 mb-8">
+            Click the button below to select a convenient time. Our team will
+            confirm your booking, typically within 24 hours.
           </p>
-
-          <BookingCalendar selectedPackage={selectedPackage} />
+          <Button asChild size="lg" className="text-lg px-8 py-4">
+            <a href="#book-consultation">
+              Open Booking Calendar
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
         </div>
-      </section>
+        <BookingDialog selectedPackage={selectedPackage} />
+      </section> */}
 
       {/* -------------------- PROGRAMS SECTION -------------------- */}
       <section id="programs" className="py-16 bg-gray-50 scroll-mt-24">
@@ -117,9 +122,9 @@ export default function Home() {
               Our Programs
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our tailored programs designed to help you grow, connect,
-              and thrive in your career—whether you’re advancing, upskilling, or
-              returning to work.
+              Explore our tailored programs designed to help you gain clarity,
+              build confidence, and thrive in the workplace - whether you're
+              advancing, upskilling, or returning to work.
             </p>
           </div>
 
@@ -138,7 +143,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-6">
-                    Personalized coaching sessions to help you gain clarity,
+                    Personalised coaching sessions to help you gain clarity,
                     build confidence, and create a practical plan for your next
                     career move.
                   </p>
@@ -149,7 +154,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Personalized growth assessment
+                      Personalised growth assessment
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
@@ -180,22 +185,22 @@ export default function Home() {
                 <CardContent>
                   <p className="text-gray-600 mb-6">
                     Learn, collaborate, and grow in a supportive group setting.
-                    Build essential skills, expand your network, and boost your
-                    professional growth through our 5-week and 8-week
-                    masterclasses.
+                    Choose from WeGrow Pamoja (5-week program), WeGrow
+                    Masterclass (on-demand sessions), or Bespoke Learning
+                    Packages tailored to your needs.
                   </p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      5-week and 8-week programs
+                      WeGrow Pamoja - 5-week interactive group program
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Cohort-based learning
+                      WeGrow Masterclass - Focused, high-impact sessions
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Peer accountability and networking
+                      Bespoke Learning Packages - Tailored to your goals
                     </li>
                   </ul>
                 </CardContent>
@@ -223,28 +228,29 @@ export default function Home() {
                   <p className="text-gray-600 mb-6">
                     A safe and empowering space for women re-entering the
                     workforce after maternity, caregiving, or career breaks.
-                    Rebuild confidence, refresh your skills, and design a career
-                    path that fits your life today.
+                    Choose your pathway: Return to Work or Entrepreneurship.
                   </p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Return-to-work coaching & support
+                      Return to Work Pathway - Rebuild confidence and refresh
+                      your professional profile
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Confidence and skills rebuilding
+                      Entrepreneurship Pathway - Turn your skills into viable
+                      business ideas
                     </li>
                     <li className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />{" "}
-                      Sustainable career planning
+                      Supportive community and practical tools
                     </li>
                   </ul>
                 </CardContent>
               </div>
               <div className="p-6 pt-0 mt-auto">
                 <Button asChild className="w-full">
-                  <Link href="/allgrow">Join the Community</Link>
+                  <Link href="/allgrow">Support the Mission</Link>
                 </Button>
               </div>
             </Card>
@@ -257,17 +263,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Yugrow</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-            Growing a career in today's competitive job market can feel
-            overwhelming. From crafting a compelling CV and preparing for
-            interviews to navigating workplace dynamics, building confidence,
-            and expanding professional networks, many struggle to find the right
-            guidance and support to thrive.
+            Early and mid-level professionals often struggle to succeed in the
+            workplace because of a lack of clarity and confidence. From
+            navigating workplace dynamics and building professional networks to
+            positioning career breaks as strengths, many need the right guidance
+            and support to thrive.
           </p>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
             At Yugrow Careers Consulting, we understand how challenging this
-            journey can be. That is why we offer a range of personalized career
-            development packages including career coaching, workplace training,
-            networking support, and our signature WeGrow sessions.
+            journey can be. That is why we offer comprehensive and holistic
+            programs that blend personalised guidance, group learning, practical
+            tools, and ongoing support to help you gain the clarity and
+            confidence you need to thrive in the workplace.
           </p>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
             You do not have to navigate your career journey alone. We are here
@@ -291,11 +298,11 @@ export default function Home() {
       <section className="py-16 bg-orange-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Start Your Career Transformation?
+            Ready to Thrive in the Workplace?
           </h2>
           <p className="text-xl text-orange-100 mb-8">
-            Join hundreds of professionals who have already transformed their
-            careers with Yugrow.
+            Join hundreds of professionals who have gained the clarity and
+            confidence they need to thrive in the workplace with Yugrow.
           </p>
           <Button
             asChild
@@ -333,7 +340,7 @@ function TestimonialsCarousel() {
     },
     {
       quote:
-        "The WeGrow group program gave me practical tools and a supportive community. I learned how to network confidently and even got introduced to my current employer through a fellow participant!",
+        "The WeGrow Pamoja program gave me practical tools and a supportive community. Through the 5-week interactive sessions, I learned how to network confidently and gained the clarity I needed to advance in my career.",
       name: "Brian K.",
       role: "HR Assistant",
       initial: "B",
