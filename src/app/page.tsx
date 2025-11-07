@@ -79,7 +79,7 @@ export default function Home() {
           <div className="relative flex justify-center lg:justify-end z-10">
             <div className="relative w-full max-w-md lg:max-w-xl">
               <img
-                src="/images/homepage.jpg"
+                src="/images/hero-bg.jpg"
                 alt="Abstract representation of growth and clarity"
                 className="w-full h-auto rounded-3xl shadow-2xl object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
               />

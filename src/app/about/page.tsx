@@ -51,7 +51,7 @@ export default function AboutPage() {
           {/* Right: Text */}
           <div className="flex justify-center lg:justify-start">
             <img
-              src="/images/yugrow.png"
+              src="/images/homepage.jpg"
               alt="Yugrow Careers Consulting"
               className="w-full max-w-md rounded-2xl shadow-lg object-contain"
             />

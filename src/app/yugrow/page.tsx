@@ -74,7 +74,7 @@ export default function YuGrowPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.jpg"
+            src="/images/yugrow.jpg"
             alt="YuGrow 1-on-1 Career Coaching"
             className="w-full h-full object-cover opacity-30"
           />
@@ -118,7 +118,7 @@ export default function YuGrowPage() {
           {/* Foreground Image (on Desktop) */}
           <div className="hidden lg:flex justify-end relative">
             <img
-              src="/images/hero-bg.jpg"
+              src="/images/yugrow.jpg"
               alt="Career coaching session"
               className="w-full max-w-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
             />
