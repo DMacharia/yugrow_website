@@ -263,18 +263,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Yugrow</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-            Early and mid-level professionals often struggle to succeed in the
-            workplace because of a lack of clarity and confidence. From
-            navigating workplace dynamics and building professional networks to
-            positioning career breaks as strengths, many need the right guidance
-            and support to thrive.
+            Growing a career in today’s competitive job market can feel
+            overwhelming, especially when you’re navigating unclear growth
+            paths, limited mentorship, evolving skill demands, and the challenge
+            of making your work visible in complex organisations.
           </p>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
             At Yugrow Careers Consulting, we understand how challenging this
-            journey can be. That is why we offer comprehensive and holistic
-            programs that blend personalised guidance, group learning, practical
-            tools, and ongoing support to help you gain the clarity and
-            confidence you need to thrive in the workplace.
+            journey can be. That’s why we offer a range of holistic,
+            personalized career development packages, combining career coaching,
+            practical workplace training, and ongoing community support, all
+            designed to help professionals achieve long-term career growth with
+            clarity and confidence.
           </p>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
             You do not have to navigate your career journey alone. We are here
@@ -304,17 +304,14 @@ export default function Home() {
             Join hundreds of professionals who have gained the clarity and
             confidence they need to thrive in the workplace with Yugrow.
           </p>
-          <Button
-            asChild
+          <CTAButton
             size="lg"
-            variant="secondary"
-            className="text-lg px-8 py-4"
+            className="text-lg px-8 py-4 bg-gray-800 text-white font-semibold rounded-full shadow-md hover:bg-gray-800 hover:scale-105 transition-all"
+            ctaType="consultation"
           >
-            <a href="#book-consultation">
-              Book Your Free Consultation Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+            Speak with a coach
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </CTAButton>
         </div>
       </section>
     </div>

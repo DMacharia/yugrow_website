@@ -146,42 +146,44 @@ export default function YuGrowPage() {
           {/* Packages */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Quick-Win Coaching */}
-            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-400">
-              <CardHeader>
+            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-400 flex flex-col h-full">
+              <CardHeader className="flex-shrink-0">
                 <CardTitle className="text-2xl font-bold">
-                  Quick-Win Coaching
+                  Quick Win Coaching
                 </CardTitle>
-                <CardDescription className="text-base text-gray-600">
-                  Perfect for individuals with one immediate need.
+                <CardDescription className="text-base text-gray-600 min-h-[48px]">
+                  {" "}
                 </CardDescription>
                 <div className="mt-6">
                   <div className="text-4xl font-bold text-orange-500">
                     Ksh 3,000
                   </div>
-                  <p className="text-sm text-gray-500">Per Hour</p>
+                  <p className="text-sm text-gray-500">per hour</p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-8">
+              <CardContent className="flex-grow flex flex-col">
+                <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Career Clarity Call:</strong> 1-hour discovery
-                      session to clarify direction, strengths, and next steps.
+                      <strong>Performance Review Prep:</strong> Prepare for an
+                      upcoming appraisal or feedback session by identifying your
+                      wins, growth areas, and strategies to advocate for
+                      yourself.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
                       <strong>Interview Power Hour:</strong> Mock interview and
                       feedback for confidence and success.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>LinkedIn Refresh:</strong> Revamp your
-                      professional profile to attract better opportunities.
+                      <strong>Setting Career Goal:</strong> Create SMART goals
+                      for tracking.
                     </span>
                   </li>
                 </ul>
@@ -189,7 +191,7 @@ export default function YuGrowPage() {
                   onClick={() => {
                     window.open(SIGNUP_FORM_URL, "_blank");
                   }}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all mt-auto"
                 >
                   Book Quick-Win Session
                 </Button>
@@ -197,18 +199,18 @@ export default function YuGrowPage() {
             </Card>
 
             {/* Professional Growth */}
-            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-500 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-500 relative flex flex-col h-full">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                 <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                   Most Popular
                 </span>
               </div>
-              <CardHeader>
+              <CardHeader className="flex-shrink-0">
                 <CardTitle className="text-2xl font-bold">
                   Professional Growth
                 </CardTitle>
-                <CardDescription className="text-base text-gray-600">
-                  Designed for structured career growth and transformation.
+                <CardDescription className="text-base text-gray-600 min-h-[48px]">
+                  Designed for early and mid level professionals
                 </CardDescription>
                 <div className="mt-6">
                   <div className="text-4xl font-bold text-orange-500">
@@ -219,27 +221,30 @@ export default function YuGrowPage() {
                   </p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-8">
+              <CardContent className="flex-grow flex flex-col">
+                <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Career Repositioning Package:</strong> Assessment
-                      mapping and job search strategy.
+                      <strong>Career Clarity:</strong> Core strengths and
+                      transferable skills, personal values and ideal work
+                      environment identification.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Job Search Accelerator:</strong> Focus on personal
-                      branding, networking, and interview excellence.
+                      <strong>Thriving in the Workplace:</strong> Navigating
+                      workplace politics, managing performance pressure and
+                      imposter syndrome, managing stress and preventing burnout.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Young Professional Launchpad:</strong> For
-                      graduates building direction and job readiness.
+                      <strong>Career Positioning & Growth:</strong> Audit your
+                      portfolio (CV and LinkedIn), refine your job search
+                      strategy, and strengthen your interview performance.
                     </span>
                   </li>
                 </ul>
@@ -247,7 +252,7 @@ export default function YuGrowPage() {
                   onClick={() => {
                     window.open(SIGNUP_FORM_URL, "_blank");
                   }}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all mt-auto"
                 >
                   Start Professional Growth
                 </Button>
@@ -255,45 +260,47 @@ export default function YuGrowPage() {
             </Card>
 
             {/* Career Mastery */}
-            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-600">
-              <CardHeader>
+            <Card className="hover:shadow-lg transition-all border-t-4 border-orange-600 flex flex-col h-full">
+              <CardHeader className="flex-shrink-0">
                 <CardTitle className="text-2xl font-bold">
                   Career Mastery Program
                 </CardTitle>
-                <CardDescription className="text-base text-gray-600">
-                  A 4-month journey for total career transformation and
-                  accountability.
+                <CardDescription className="text-base text-gray-600 min-h-[48px]">
+                  Designed for mid-level professionals and those transitioning
+                  into senior leadership roles.
                 </CardDescription>
                 <div className="mt-6">
                   <div className="text-4xl font-bold text-orange-500">
                     Ksh 30,000
                   </div>
                   <p className="text-sm text-gray-500">
-                    12 sessions over 4 months
+                    9 sessions over 3 months
                   </p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-8">
+              <CardContent className="flex-grow flex flex-col">
+                <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Career Transformation Plan:</strong> Deep
-                      coaching, mentoring, and accountability tracking.
+                      <strong>Comprehensive Career Strategy:</strong> Deep-dive
+                      assessment and strategic planning for senior leadership
+                      transitions and career advancement.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong>Leadership Transition Package:</strong> Build
-                      executive presence, negotiation, and influence.
+                      <strong>Executive Leadership Development:</strong> Build
+                      executive presence, influence, and negotiation skills for
+                      senior roles.
                     </span>
                   </li>
                   <li className="flex items-start text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span>
                       <strong>Priority Access:</strong> Ongoing progress reviews
-                      and unlimited check-ins between sessions.
+                      with 3 free 30mins check-ins.
                     </span>
                   </li>
                 </ul>
@@ -301,7 +308,7 @@ export default function YuGrowPage() {
                   onClick={() => {
                     window.open(SIGNUP_FORM_URL, "_blank");
                   }}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all mt-auto"
                 >
                   Start Mastery Journey
                 </Button>

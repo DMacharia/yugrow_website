@@ -297,18 +297,38 @@ export default function ContactPage() {
                       <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                         <MessageCircle className="h-6 w-6 text-orange-500" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                          Book a Consultation
+                          Get Started
                         </h3>
                         <p className="text-gray-600 mb-4">
-                          Fill out our Google Form to book a free 30-minute
-                          consultation. Complete payment via M-Pesa and we'll
-                          confirm your booking within 24-48 hours.
+                          Sign up for our programs or book a free 30-minute
+                          consultation. We will be glad to hear from you and
+                          respond within 24-48 hours.
                         </p>
-                        <Button asChild>
-                          <a href="/#book-consultation">Book Consultation</a>
-                        </Button>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <Button asChild variant="outline" className="flex-1">
+                            <a
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSeJIO-GRHhF-iAOucajh1vyF339imilul9i4b-d1PLjOZPpXA/viewform?usp=dialog"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Sign Up
+                            </a>
+                          </Button>
+                          <Button
+                            asChild
+                            className="flex-1 bg-orange-500 hover:bg-orange-600"
+                          >
+                            <a
+                              href="https://docs.google.com/forms/d/e/1FAIpQLSeJIO-GRHhF-iAOucajh1vyF339imilul9i4b-d1PLjOZPpXA/viewform?usp=dialog"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Book Free Consultation
+                            </a>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </CardContent>

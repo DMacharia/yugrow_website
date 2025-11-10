@@ -381,8 +381,220 @@ export default function WeGrowPage() {
         </div>
       </section>
 
-      {/* Program Benefits Section */}
+      {/* Cohort Experience Section */}
       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Cohort Experience
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Join a community of professionals committed to growth and
+              transformation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* What Makes Our Cohorts Special */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                What Makes Our Cohorts Special
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <Users className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Small, Intimate Groups
+                    </h4>
+                    <p className="text-gray-600">
+                      Cohorts of 3-10 participants ensure personalized attention
+                      and meaningful connections with peers and facilitators.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <Heart className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Supportive Community
+                    </h4>
+                    <p className="text-gray-600">
+                      A safe space where participants share experiences,
+                      challenges, and celebrate wins together.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <Target className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Action-Oriented Learning
+                    </h4>
+                    <p className="text-gray-600">
+                      Each session includes practical exercises and real-world
+                      applications you can implement immediately.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <Sparkles className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Diverse Perspectives
+                    </h4>
+                    <p className="text-gray-600">
+                      Learn from professionals across different industries,
+                      roles, and career stages for richer insights.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <CheckCircle className="h-5 w-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Ongoing Accountability
+                    </h4>
+                    <p className="text-gray-600">
+                      Regular check-ins and peer support help you stay committed
+                      to your growth goals throughout the program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Upcoming Cohorts */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Upcoming Cohorts
+              </h3>
+              <div className="space-y-6">
+                <Card className="hover:shadow-lg transition-shadow border-orange-200">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">
+                          WeGrow Pamoja - January 2025
+                        </h4>
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          <span className="text-sm">
+                            Tuesdays, 7:00 PM - 8:30 PM
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-500">
+                          Starting January 7, 2025
+                        </p>
+                      </div>
+                      <div className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+                        Open
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600 mb-4">
+                      <Users className="h-4 w-4 mr-2" />
+                      <span>3-10 participants per cohort</span>
+                    </div>
+                    <Button
+                      asChild
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-full transition-all"
+                    >
+                      <Link href="/contact">
+                        Join This Cohort
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-shadow border-gray-200">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">
+                          WeGrow Pamoja - February 2025
+                        </h4>
+                        <div className="flex items-center text-gray-600 mb-2">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          <span className="text-sm">
+                            Thursdays, 7:00 PM - 8:30 PM
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-500">
+                          Starting February 6, 2025
+                        </p>
+                      </div>
+                      <div className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold">
+                        Coming Soon
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600 mb-4">
+                      <Users className="h-4 w-4 mr-2" />
+                      <span>3-10 participants per cohort</span>
+                    </div>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold py-2 rounded-full transition-all"
+                    >
+                      <Link href="/contact">
+                        Get Notified
+                        <Mail className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                  <div className="flex items-start">
+                    <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <Calendar className="h-5 w-5 text-orange-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        New Cohorts Monthly
+                      </h4>
+                      <p className="text-sm text-gray-600 mb-4">
+                        WeGrow Pamoja cohorts alternate between Tuesdays and
+                        Thursdays each month. Can't make these dates? Contact us
+                        to be notified about future cohorts.
+                      </p>
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="border-orange-500 text-orange-500 hover:bg-orange-50"
+                      >
+                        <Link href="/contact">
+                          Contact Us
+                          <Mail className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Benefits Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -550,31 +762,6 @@ export default function WeGrowPage() {
             </Card>
           </div>
         </div>
-      </section>
-
-      <section id="book-class" className="py-16 bg-white scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Career?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Book your free introductory meeting today and take the first step
-              towards career success.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="text-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              <a href="#book-class">
-                Open Booking Calendar
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-          </div>
-        </div>
-        <BookingDialog selectedPackage={selectedPackage} />
       </section>
     </div>
   );

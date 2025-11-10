@@ -103,38 +103,27 @@ export default function AboutPage() {
                   <span className="font-semibold text-gray-900">
                     Virginiah Gitome
                   </span>{" "}
-                  is a Certified Career Professional and the Founder of{" "}
-                  <span className="font-semibold text-gray-900">
+                  is a{" "}
+                  <span className="italic">
+                    Certified Career Professional and Founder
+                  </span>{" "}
+                  of{" "}
+                  <span className="font-bold text-black">
                     Yugrow Consulting
                   </span>
-                  , where she specialises in workplace growth and meaningful
-                  career development.
+                  , specializing in workplace growth. With 10+ years of
+                  experience, she helps early and mid-career professionals
+                  clarify their goals, build confidence, and develop the skills
+                  needed to thrive at work.
                 </p>
 
                 <p>
-                  With over{" "}
-                  <span className="font-semibold">10 years of experience</span>{" "}
-                  supporting early and mid-career professionals, Virginiah helps
-                  individuals clarify their goals, build confidence, and develop
-                  the skills needed to thrive in their careers.
-                </p>
-
-                <p>
-                  Her approach goes beyond helping professionals find the right
-                  opportunities — it’s about positioning them to grow{" "}
-                  <span className="italic">within</span> those opportunities,
-                  fostering sustainable success and long-term impact in their
-                  professional journeys.
-                </p>
-
-                <p>
-                  Through{" "}
-                  <span className="font-semibold">
-                    career development programs, workplace training,
-                  </span>{" "}
-                  and practical tools, she equips individuals to excel in their
-                  roles, rediscover purpose, and achieve balance between
-                  ambition and well-being.
+                  Through career development programs, workplace training, and
+                  practical tools, Virginiah equips professionals to excel in
+                  their roles. Her holistic approach goes beyond helping
+                  individuals find the right opportunities, it positions them to
+                  grow meaningfully within them, creating lasting impact and
+                  sustainable career success.
                 </p>
               </div>
 
@@ -168,14 +157,14 @@ export default function AboutPage() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton
+                <Button
+                  asChild
                   variant="outline"
                   size="lg"
                   className="text-lg px-8 py-4"
-                  ctaType="contact"
                 >
-                  Get in Touch
-                </CTAButton>
+                  <Link href="/contact">Get in Touch</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -505,10 +494,12 @@ export default function AboutPage() {
                   Interested in having Virginiah speak at your event or
                   organisation? We'd love to hear from you.
                 </p>
-                <CTAButton className="w-full" ctaType="contact">
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </CTAButton>
+                <Button asChild className="w-full">
+                  <Link href="/contact">
+                    Get in Touch
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -531,7 +522,7 @@ export default function AboutPage() {
             className="text-lg px-8 py-4"
             ctaType="consultation"
           >
-            Book Your Free Consultation
+            Speak with a Coach
             <ArrowRight className="ml-2 h-5 w-5" />
           </CTAButton>
         </div>

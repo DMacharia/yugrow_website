@@ -19,8 +19,8 @@ export function Navigation() {
     { href: "/contact", label: "Contact" },
   ];
 
-  // Always link to home page + section anchor
-  const bookLink = "/#book-consultation";
+  // Link to contact page for booking consultation
+  const bookLink = "/contact";
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
