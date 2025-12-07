@@ -400,7 +400,7 @@ export default function WeGrowPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 What Makes Our Cohorts Special
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <Users className="h-5 w-5 text-orange-500" />
@@ -476,67 +476,19 @@ export default function WeGrowPage() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Upcoming Cohorts */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Upcoming Cohorts
-              </h3>
               <div className="space-y-6">
-                <Card className="hover:shadow-lg transition-shadow border-orange-200">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">
-                          WeGrow Pamoja - January 2025
-                        </h4>
-                        <div className="flex items-center text-gray-600 mb-2">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          <span className="text-sm">
-                            Tuesdays, 7:00 PM - 8:30 PM
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-500">
-                          Starting January 7, 2025
-                        </p>
-                      </div>
-                      <div className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
-                        Open
-                      </div>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600 mb-4">
-                      <Users className="h-4 w-4 mr-2" />
-                      <span>3-10 participants per cohort</span>
-                    </div>
-                    <Button
-                      asChild
-                      className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-full transition-all"
-                    >
-                      <Link href="/contact">
-                        Join This Cohort
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-
                 <Card className="hover:shadow-lg transition-shadow border-gray-200">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <h4 className="text-xl font-bold text-gray-900 mb-2">
-                          WeGrow Pamoja - February 2025
+                          WeGrow Pamoja - January 2026
                         </h4>
                         <div className="flex items-center text-gray-600 mb-2">
                           <Calendar className="h-4 w-4 mr-2" />
-                          <span className="text-sm">
-                            Thursdays, 7:00 PM - 8:30 PM
-                          </span>
+                          <span className="text-sm">Details coming soon</span>
                         </div>
-                        <p className="text-sm text-gray-500">
-                          Starting February 6, 2025
-                        </p>
                       </div>
                       <div className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold">
                         Coming Soon
@@ -587,6 +539,72 @@ export default function WeGrowPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Upcoming Cohorts */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Upcoming Cohorts
+              </h3>
+              <div className="space-y-6">
+                <Card className="hover:shadow-lg transition-shadow border-orange-200">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">
+                          WeGrow Pamoja - December 2025
+                        </h4>
+                      </div>
+                      <div className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+                        Open
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <img
+                        src="/upcomingdec2025event.jpeg"
+                        alt="Personal Goal Setting Session - December 2025"
+                        className="w-full rounded-lg shadow-md"
+                      />
+                    </div>
+
+                    <div className="space-y-4 mb-6">
+                      <p className="text-gray-700">
+                        As we wrap up 2025, this is the moment to get clear.
+                        Most of us dream big, but we don't plan, and that's how
+                        goals die.
+                      </p>
+                      <p className="text-gray-700">
+                        January is for executing, not planning 🙂. So let's
+                        break the cycle.
+                      </p>
+                      <p className="text-gray-700">
+                        If you're ready to grow, pivot, or reset in 2026, join
+                        my{" "}
+                        <span className="font-bold">
+                          Personal Goal-Setting Session
+                        </span>
+                        . We'll map out your vision and set you up for an
+                        intentional, focused year.
+                      </p>
+                      <p className="text-gray-700 font-bold">
+                        Your 2026 starts now.
+                      </p>
+                    </div>
+
+                    {/* TODO: Replace href with Google Form link */}
+                    <Button
+                      asChild
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-full transition-all"
+                    >
+                      <Link href="#" target="_blank">
+                        Join This Cohort
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
